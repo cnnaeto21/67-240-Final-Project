@@ -5,15 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Carousel Template · Bootstrap</title>
+    <title>Home Page</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+      <!--<div class = "container">-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+                <div class="container">
+                  <div class="carousel-caption text-left">
+                    <h1>Welcome to the BRCC.</h1>
+                    <p><strong>We are here to revice Braddock and empower the community.</strong></p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">About us</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+                <div class="container">
+                  <div class="carousel-caption text-left">
+                    <h1>Business Conference 2022.</h1>
+                    <p><strong>Join us at our annual business conference where you can connect with the Braddock Region.</strong></p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+                <div class="container">
+                  <div class="carousel-caption text-left">
+                    <h1>Business of the week!</h1>
+                    <p><strong>Our business of the week is Walters Accounting. Learn more about this wonderful business below!</strong></p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Explore Site</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      <!-- </div> -->
+
+      <div class = "jumbotron">
+        <h1 class="display-4 text-center">Join the BRCC!</h1>
+        <p class="lead text-center">A welcome community here to unite and develop organizations and communites alike.</p>
+        <button type="button" class="btn btn-primary btn-lg btn-block"><strong>BECOME A MEMBER!</strong></button>
+      </div>  
 
   </body>
+
+
+  <footer>
+    <a href = "mailto:cnnaeto@andrew.cmu.edu"><img class ="icon" src = "../images/gmail-32-761667.png"></a>
+    <a href = "https://www.linkedin.com"><img class ="icon" src = "../images/linkedinfigma.png"></a>
+    <a href = "https://www.facebook.com/"><img class="icon" src = "../images/facebook.png"></a>
+
+    <!-- <p class="float-right"><a href="#">Back to top</a></p> -->
+    <p class="footer float-right">&copy; 2017-2020 Braddock Region Chamber of Commerce &middot;
+                                  200 Well ln. Braddock PA 15104 &middot;
+                                  412-234-2565 &middot;
+    </p>
+
+    
+  </footer>
 </html>
