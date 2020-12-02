@@ -12,12 +12,68 @@
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
+    <link href = "../css/styles-homepagecomponents.css" rel = "stylesheet">
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+
+    <!--TOP NAV-->
+    <!--NOTE: contains two nav bars because of the brand section and the five tabs-->
+    
+    <!--brand nav-->
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+        
+      <!-- Navbar content -->
+      <br>
+      <!--mx-auto helps center content in the nav-->
+      <div class = "mx-auto">
+          <a class = "navbar-brand mb-0 h1" href = "#">Braddock Region Chamber of Commerce</a>
+      </div> <!--end flexbox-->
+
+  </nav> <!--end brand nav-->
+
+  <!--tab nav-->
+  <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <!--needed to use flex boxes in order to maintain spacing-->
+          
+          <div class="d-flex mx-auto">
+          <a class = "nav-link active-tab" href = "#">  Home  <span class="sr-only">(current)</span></a> 
+          </div>
+          <div class="d-flex mx-auto">
+              <a class = "nav-link" href = "find.html">  Find  </a> 
+          </div>
+          <div class="d-flex mx-auto">
+              <a class = "nav-link" href = "#"> Start </a> 
+          </div>
+          <div class="d-flex mx-auto">
+              <a class = "nav-link" href = "#">Develop</a> 
+          </div>
+          <div class="d-flex mx-auto">
+              <a class = "nav-link" href = "#"> About </a> 
+          </div>
+      </div><!--end collapse navbar-collapse-->
+  </nav> <!--end tab nav-->
+  
+  <!--INFO BUTTON-->
+  <button type="button" class="btn btn-info btn-lg btn-block">Internships, Jobs, and Youth Development Programs here!</button>
+
+  <!--BREADCRUMBS-->
+  <!--homepage breadcrumb-->
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+      </ol>
+  </nav>
+
       <!--<div class = "container">-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -74,8 +130,61 @@
         <button type="button" class="btn btn-primary btn-lg btn-block"><strong>BECOME A MEMBER!</strong></button>
       </div>  
 
-  </body>
+  <div class = "container">
+    <!--CARD SECTIONS-->
+    <div class = "row">
+        <div class = "col-md-12 col-lg-6 col-xl-4">
+            <div class="hsec card mx-auto">
+                <h2 class="card-title text-center">Entrepreneurship</h2>
+                <!--Image from Burst by Pexels-->
+                <img class="img-fluid" src="../images/pexels-burst-374085.jpg" alt="Card image cap">
+                <div class="card-body">
+                  
+                  <p class="card-text">At BBRC, we encourage development of new and current businesses, nonprofits, and youth entrepreneurship, along with community engagement.</p>
+                </div><!--end card body-->
+                
+            </div><!--end card-->
+        </div><!--end col-md-4-->
+        <div class =  "col-md-12 col-lg-6 col-xl-4">
+            <div class="hsec card mx-auto">
+                <h2 class="card-title text-center">Workshops</h2>
+                <!--Photo by ICSA from Pexels-->                    
+                <img class="img-fluid" src="../images/pexels-icsa-1708912.jpg" alt="Card image cap">
+                <div class="card-body">
+                  
+                  <p class="card-text">At BBRC, we encourage development of new and current businesses, nonprofits, and youth entrepreneurship, along with community engagement.</p>
+                </div><!--end card body-->
+                
+            </div><!--end card-->
+        </div><!--end col-md-4-->
+        <div class =  "col-md-12 col-lg-6 col-xl-4">
+            <div class="hsec card mx-auto">
+                <h2 class="card-title text-center">Success Stories</h2>
+                <!--Photo by Artem Beliaikin from Pexels-->
+                <img class="img-fluid" src="../images/pexels-artem-beliaikin-929245.jpg" alt="Card image cap">
+                <div class="card-body">
+                  
+                  <p class="card-text">At BBRC, we encourage development of new and current businesses, nonprofits, and youth entrepreneurship, along with community engagement.</p>
+                </div><!--end card body-->
+                
+            </div><!--end card-->
+        </div><!--end col-md-4-->
+    </div><!--end row-->
 
+    <br><br><br><br>
+    <!--CALENDAR INTEGRATION-->
+    <div class = "row">
+        <div class = "embed-responsive embed-responsive-16by9">
+            <!--iframe instructions: https://support.google.com/calendar/answer/41207?hl=en-->
+            <!--the source is a temporary calendar-->
+            <!--original in-line styles: style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"-->
+            <!--current aspect ratio is 16:9 in Bootstrap-->
+            <!--Bootstrap: https://getbootstrap.com/docs/4.0/utilities/embed/-->
+            <iframe src="https://calendar.google.com/calendar/embed?src=c_1tiplsqt17qk0kn0aabbnpn29s%40group.calendar.google.com&ctz=America%2FNew_York"></iframe>
+        </div><!--end col-12-->
+    </div><!--end row-->
+</div><!--end container-->
+<br><br>
 
   <footer>
     <a href = "mailto:cnnaeto@andrew.cmu.edu"><img class ="icon" src = "../images/gmail-32-761667.png"></a>
@@ -87,7 +196,7 @@
                                   200 Well ln. Braddock PA 15104 &middot;
                                   412-234-2565 &middot;
     </p>
-
     
   </footer>
+ </body>
 </html>
