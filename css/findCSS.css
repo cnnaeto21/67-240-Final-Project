@@ -1,0 +1,106 @@
+
+#sidebar {
+    float: left;
+}
+
+#myCarousel {
+    clear: both;
+}
+
+#content {
+    margin: 2%;
+}
+
+
+.nopad {
+    padding-right: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li.active {
+    color:  #ebba0a
+}
+
+#sidebar {
+    max-width: 15%;
+}
+
+.iconHolder {
+    position: absolute;
+    width: 70%;
+    height: 25%;
+    top: 60%;
+    right: 0%;
+    background-color:  #ebba0a;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+}
+
+#businesses {
+    margin-left: 20%;
+}
+
+.iconHolder h2 {
+    margin-left: 2%;
+    padding-bottom: 2%;
+    font-size: 1.5em;
+}
+
+p.rating {
+    display: inline;
+    float: right;
+}
+
+ .backed {
+     background-color: white;
+ }
+
+img.star {
+    float: right;
+    margin-right: 5%;
+}
+
+#keys {
+    background-color: rgb(233, 233, 233);
+}
+
+#keys h2 {
+    border-bottom: 2px solid;
+    text-align: center;
+}
+
+.card {
+    margin-top: 5%;
+    padding: 6%;
+    box-shadow: 3px 4px rgba(167, 165, 165, 0.404);
+}
+
+#industries {
+   border-bottom: 1px solid;
+}
+
+.industry-header {
+    background-color:#fbe089;
+}
+
+.iconHolder .icon {
+    position: relative;
+    width: 15%;
+    min-width: 15%;
+    max-width: 15%;
+    min-height: 40%;
+    bottom: 30%;
+    padding: 0.25% 0.5%;
+    border-radius: 20%;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+
+.keyimg {
+    width: 20%;
+    margin: 2% 10%;
+}
