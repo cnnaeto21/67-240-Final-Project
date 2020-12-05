@@ -1,4 +1,30 @@
 
+
+/*NEW CHANGES
+*/
+li.active {
+    color:  #C39B09; /*changed to be darker for readability*/
+}
+li:hover {
+    color: #ebba0a;
+}
+
+/*allows the card to overlay the thumbnail */
+.business-info{
+    position:relative;
+    top: -140px;
+    left: 5rem; /*18 - 13 = 5*/
+    background-color: #ebba0a;
+    border-radius: 0rem;
+    
+    
+}
+
+
+
+
+/*END NEW CHANGES*/
+
 #sidebar {
     float: left;
 }
@@ -20,9 +46,6 @@ ul {
     list-style: none;
 }
 
-li.active {
-    color:  #ebba0a
-}
 
 #sidebar {
     max-width: 15%;
