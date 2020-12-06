@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Find Local Businesses</title>=
+  <title>Find Local Businesses</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -24,48 +24,50 @@
 </head>
 
 <body>
-  <!--TOP NAV-->
-  <!--NOTE: contains two nav bars because of the brand section and the five tabs-->
-
-  <!--brand nav-->
-  <nav class="navbar sticky-top navbar-expand-sm navbar-light">
-
-  <!-- Navbar content -->
-  <br>
-  <!--mx-auto helps center content in the nav-->
-  <div class = "mx-auto">
-  <a class = "navbar-brand mb-0 h1" href = "#">Braddock Region Chamber of Commerce</a>
-  </div> <!--end flexbox-->
-
-  </nav> <!--end brand nav-->
-
-  <!--tab nav-->
-  <nav class="navbar sticky-top navbar-expand-sm navbar-light">
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-  <!--needed to use flex boxes in order to maintain spacing-->
-
-    <div class="d-flex mx-auto">
-    <a class = "nav-link" href = "home.html">  Home  </a> 
+    <!--TOP NAV-->
+    <!--NOTE: contains two nav bars because of the brand section and the five tabs-->
+    
+    <!--brand nav-->
+    <div id = "mb-0 pb-0">
+      <nav class="navbar sticky-top navbar-expand-sm navbar-light m-0">
+          <!-- Navbar content -->
+          <br>
+          <!--mx-auto helps center content in the nav-->
+          <div class = "mx-auto">
+              <a class = "m-0 brandname" href = "home.html">Braddock Region Chamber of Commerce</a>
+          </div> <!--end flexbox-->
+  
+      </nav> <!--end brand nav-->
+  
     </div>
-    <div class="d-flex mx-auto">
-    <a class = "nav-link active-tab" href = "#">  Find  <span class="sr-only">(current)</span></a> 
-    </div>
-    <div class="d-flex mx-auto">
-    <a class = "nav-link" href = "#"> Start </a> 
-    </div>
-    <div class="d-flex mx-auto">
-    <a class = "nav-link" href = "#">Develop</a> 
-    </div>
-    <div class="d-flex mx-auto">
-    <a class = "nav-link" href = "#"> About </a> 
-    </div>
-    </div><!--end collapse navbar-collapse-->
-  </nav> <!--end tab nav-->
+
+    <!--tab nav-->
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <!--needed to use flex boxes in order to maintain spacing-->
+              
+              <div class="d-flex mx-auto tabs">
+              <a class = "nav-link active-tab" href = "home.html">  Home  <span class="sr-only">(current)</span></a> 
+              </div>
+              <div class="d-flex mx-auto tabs">
+                  <a class = "nav-link" href = "find.html">  Find  </a> 
+              </div>
+              <div class="d-flex mx-auto tabs">
+                  <a class = "nav-link" href = "#"> Start </a> 
+              </div>
+              <div class="d-flex mx-auto tabs">
+                  <a class = "nav-link" href = "#">Develop</a> 
+              </div>
+              <div class="d-flex mx-auto tabs">
+                  <a class = "nav-link" href = "#"> About </a> 
+              </div>
+          </div><!--end collapse navbar-collapse-->
+      </nav> <!--end tab nav-->
 
   <!--find page breadcrumb-->
   <nav aria-label="breadcrumb">
@@ -511,18 +513,37 @@
 </div>
 </div>
 <br><br><br><br><br><br>
-<footer>
-<a href = "mailto:cnnaeto@andrew.cmu.edu"><img class ="icon" src = "../images/gmail-32-761667.png"></a>
-<a href = "https://www.linkedin.com"><img class ="icon" src = "../images/linkedinfigma.png"></a>
-<a href = "https://www.facebook.com/"><img class="icon" src = "../images/facebook.png"></a>
-
-<!-- <p class="float-right"><a href="#">Back to top</a></p> -->
-<p class="footer float-right">&copy; 2017-2020 Braddock Region Chamber of Commerce &middot;
-200 Well ln. Braddock PA 15104 &middot;
-412-234-2565 &middot;
-</p>
-
-
-</footer>
+<footer class = "pb-0 mb-0">
+  <!--
+      CREDITS
+      facebook
+      <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      linkedin
+      <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      email
+      <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+  -->
+  <br>
+  <div class = "d-flex justify-content-center">
+      <a href = "https://www.linkedin.com"><img class = "icon p-3" src = "../images/linkedin.svg"></img></a>
+      <a href = "mailto:cnnaeto@andrew.cmu.edu"><img class = "icon p-3 mt-1" src = "../images/email.svg"></img></a>
+      <a href = "https://www.facebook.com"><img class = "icon p-3" src = "../images/facebook.svg"></img></a>
+  
+  </div> <!--end d-flex-->
+  
+  <br>
+  <div class = "copyright">
+      <div class = "d-flex justify-content-center p-3 pt-4">
+      
+          <p>&copy;2020 Braddock Region Chamber of Commerce &middot;
+              200 Well ln. Braddock PA 15104 &middot;
+              412-234-2565
+          </p>
+  
+      </div> <!--end d-flex-->
+  
+  </div><!--end copyright-->
+  
+  </footer>
 </body>
 </html>
