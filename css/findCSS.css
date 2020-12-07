@@ -18,8 +18,6 @@ li:hover {
     left: 5rem; /*18 - 13 = 5*/
     background-color: #ebba0a;
     border-radius: 0rem;
-    
-    
 }
 
 /*END NEW CHANGES*/
@@ -237,6 +235,7 @@ body {
 
   #keys li {
       height: auto;
+      font-size: 0.9rem;
   }
 
   ul li {
@@ -246,6 +245,8 @@ body {
 
   .keyimg {
       max-height: 100%;
+      height: auto;
+      width: 20%;
       min-height: 100%;
   }
 
