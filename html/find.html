@@ -24,89 +24,48 @@
 </head>
 
 <body>
-  <!--TOP NAV-->
-  <!--NOTE: contains two nav bars because of the brand section and the five tabs-->
 
-  <!--brand nav-->
-  <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+  <div id = "mb-0 pb-0">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light m-0">
+        <!-- Navbar content -->
+        <br>
+        <!--mx-auto helps center content in the nav-->
+        <div class = "mx-auto">
+            <a class = "m-0 brandname" href = "home.html">Braddock Region Chamber of Commerce</a>
+        </div> <!--end flexbox-->
 
-  <!-- Navbar content -->
-  <br>
-  <!--mx-auto helps center content in the nav-->
-  <div class="mx-auto">
-  <a class="navbar-brand mb-0 h1" href="#">Braddock Region Chamber of Commerce</a>
-  </div> <!--end flexbox-->
+    </nav> <!--end brand nav-->
 
-  </nav> <!--end brand nav-->
-
-  <!--tab nav-->
-  <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+  </div>
+<!--tab nav-->
+<nav class="navbar sticky-top navbar-expand-sm navbar-light">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-  <!--needed to use flex boxes in order to maintain spacing-->
+      <!--needed to use flex boxes in order to maintain spacing-->
+      
+      <div class="d-flex mx-auto tabs">
+      <a class = "nav-link" href = "home.html">  Home  <span class="sr-only">(current)</span></a> 
+      </div>
+      <div class="d-flex mx-auto tabs">
+          <a class = "nav-link active-tab" href = "find.html">  Find  </a> 
+      </div>
+      <div class="d-flex mx-auto tabs">
+          <a class = "nav-link" href = "#"> Start </a> 
+      </div>
+      <div class="d-flex mx-auto tabs">
+          <a class = "nav-link" href = "#">Develop</a> 
+      </div>
+      <div class="d-flex mx-auto tabs">
+          <a class = "nav-link" href = "#"> About </a> 
+      </div>
+  </div><!--end collapse navbar-collapse-->
+</nav> <!--end tab nav-->
 
-    <div class="d-flex mx-auto">
-    <a class="nav-link" href="home.html">  Home  </a> 
-    </div>
-    <div class="d-flex mx-auto">
-    <a class = "nav-link active-tab" href = "#">  Find  <span class="sr-only">(current)</span></a> 
-    </div>
-    <div class="d-flex mx-auto">
-    <a class="nav-link" href="#"> Start </a> 
-    </div>
-    <div class="d-flex mx-auto">
-    <a class="nav-link" href="#">Develop</a> 
-    </div>
-    <div class="d-flex mx-auto">
-    <a class="nav-link" href="#"> About </a> 
-    <!--TOP NAV-->
-    <!--NOTE: contains two nav bars because of the brand section and the five tabs-->
     
-    <!--brand nav-->
-    <div id = "mb-0 pb-0">
-      <nav class="navbar sticky-top navbar-expand-sm navbar-light m-0">
-          <!-- Navbar content -->
-          <br>
-          <!--mx-auto helps center content in the nav-->
-          <div class = "mx-auto">
-              <a class = "m-0 brandname" href = "home.html">Braddock Region Chamber of Commerce</a>
-          </div> <!--end flexbox-->
-  
-      </nav> <!--end brand nav-->
-  
-    </div>
-
-    <!--tab nav-->
-    <nav class="navbar sticky-top navbar-expand-sm navbar-light">
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <!--needed to use flex boxes in order to maintain spacing-->
-              
-              <div class="d-flex mx-auto tabs">
-              <a class = "nav-link active-tab" href = "home.html">  Home  <span class="sr-only">(current)</span></a> 
-              </div>
-              <div class="d-flex mx-auto tabs">
-                  <a class = "nav-link" href = "find.html">  Find  </a> 
-              </div>
-              <div class="d-flex mx-auto tabs">
-                  <a class = "nav-link" href = "#"> Start </a> 
-              </div>
-              <div class="d-flex mx-auto tabs">
-                  <a class = "nav-link" href = "#">Develop</a> 
-              </div>
-              <div class="d-flex mx-auto tabs">
-                  <a class = "nav-link" href = "#"> About </a> 
-              </div>
-          </div><!--end collapse navbar-collapse-->
-      </nav> <!--end tab nav-->
 
       </div>
       </div>
@@ -206,6 +165,7 @@
       <div class="col text-center industry-header">
         <h2 class="industry-header industry-info education">Education</h2>
         <h2 class="industry-header industry-info non-profits">Non-Profits</h2>
+        <h2 class="industry-header industry-info normal">Select an Industry to Show Businesses In The Area</h2>
       </div>
     </div>
     <div class="row text-center">

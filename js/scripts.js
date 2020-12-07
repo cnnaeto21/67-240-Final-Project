@@ -2,7 +2,7 @@
 //JS For Filtering the Find Page
 
 //start by showing all elements on the page
-filterSelection("all")
+filterSelection("normal")
 
 //function to filter depending on the argument c
 function filterSelection(c) {

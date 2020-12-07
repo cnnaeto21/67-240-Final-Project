@@ -192,6 +192,11 @@ body {
         margin-bottom: 3%;
     }
 
+    #keys ul {
+        padding:0;
+        font-size: .5rem;
+    }
+
     #industries {
         width: 100%;
         text-align: center;
@@ -216,9 +221,8 @@ body {
 }
 
 #industryList li {
-    display: block;
-    flex: 0 1 auto; /* Default */
-    list-style-type: none;
+    text-align: center;
+    margin: 1%;
 }
 
   #keys li {
@@ -233,5 +237,9 @@ body {
   .keyimg {
       max-height: 100%;
       min-height: 100%;
+  }
+
+  #businesses .d-flex {
+      margin-bottom: 4%;
   }
 }
