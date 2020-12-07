@@ -1,12 +1,14 @@
 
-
 /*NEW CHANGES
 */
-li.active {
+
+li.activebtn {
     color:  #C39B09; /*changed to be darker for readability*/
+    cursor: pointer;
 }
 li:hover {
     color: #ebba0a;
+    cursor: pointer;
 }
 
 /*allows the card to overlay the thumbnail */
@@ -20,13 +22,12 @@ li:hover {
     
 }
 
-
-
-
 /*END NEW CHANGES*/
 
+
+
 #sidebar {
-    float: left;
+    margin-right:5%;
 }
 
 #myCarousel {
@@ -51,6 +52,11 @@ ul {
     max-width: 15%;
 }
 
+#keys ul {
+    padding:0;
+    font-size: 1.5vw;
+}
+
 .iconHolder {
     position: absolute;
     width: 70%;
@@ -60,10 +66,6 @@ ul {
     background-color:  #ebba0a;
     border-top-left-radius: 15%;
     border-bottom-left-radius: 15%;
-}
-
-#businesses {
-    margin-left: 20%;
 }
 
 .iconHolder h2 {
@@ -95,9 +97,9 @@ img.star {
     text-align: center;
 }
 
-.card {
-    margin-top: 5%;
-    padding: 6%;
+.card-img-top {
+    max-width:100%;
+    height: auto;
     box-shadow: 3px 4px rgba(167, 165, 165, 0.404);
 }
 
@@ -105,16 +107,25 @@ img.star {
    border-bottom: 1px solid;
 }
 
+
+
+#industryList {
+    padding: 2%;
+}
+
+#businesses .d-flex {
+    padding:1%;
+}
+
 .industry-header {
     background-color:#fbe089;
+    width:80%;
 }
 
 .iconHolder .icon {
     position: relative;
-    width: 15%;
-    min-width: 15%;
     max-width: 15%;
-    min-height: 40%;
+    height: auto;
     bottom: 30%;
     padding: 0.25% 0.5%;
     border-radius: 20%;
@@ -122,8 +133,105 @@ img.star {
     margin-left: 2%;
 }
 
+body {
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
 
 .keyimg {
     width: 20%;
     margin: 2% 10%;
+}
+
+/*CSS For Filtering*/
+
+  .card {
+    width: 18rem;
+    height: 18rem;
+    display: none;
+    border: none !important;
+    background-color: transparent !important;
+  }
+
+  .businessBody {
+      min-height: 20rem;
+      margin-left:1%;
+      padding:0 !important;
+  }
+
+  .industry-info {
+      display: none;
+  }
+
+  .show {
+    display: inline-block;
+  }
+
+  .show-text {
+      display: inline;
+  }
+
+  
+  
+  /*To Style the Filter Buttons*/
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    
+  }
+
+  @media only screen and (max-width: 992px) {
+    
+    #sidebar {
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 3%;
+    }
+
+    #industries {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #keys ul {
+        list-style: none;
+        margin: 0 2%;
+        padding: 0;
+        display: inline-flex;
+        max-height:55%;
+  }
+
+  #industryList {
+        display: flex;
+        align-items: stretch; /* Default */
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 2%;
+        margin-bottom: 1%;
+        padding: 0;
+}
+
+#industryList li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+}
+
+  #keys li {
+      height: auto;
+  }
+
+  ul li {
+      width: 33%;
+      text-align: center;
+  }
+
+  .keyimg {
+      max-height: 100%;
+      min-height: 100%;
+  }
 }

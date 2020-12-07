@@ -3,10 +3,10 @@
 <head>
   <title>Find Local Businesses</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <meta name="description" content="">
     <meta name="generator" content="Jekyll v4.1.1">
-  <title>Final Project</title>
 
   <!--Bootstrap Carousel Template-->
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
@@ -17,13 +17,52 @@
 
   <!--Find Page CSS-->
   <link href="../css/findCSS.css" rel="stylesheet">
-  <link href = "../css/styles-homepagecomponents.css" rel = "stylesheet">
+  <link href="../css/styles-homepagecomponents.css" rel="stylesheet">
   <!--Javascript-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
+  <!--TOP NAV-->
+  <!--NOTE: contains two nav bars because of the brand section and the five tabs-->
+
+  <!--brand nav-->
+  <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+
+  <!-- Navbar content -->
+  <br>
+  <!--mx-auto helps center content in the nav-->
+  <div class="mx-auto">
+  <a class="navbar-brand mb-0 h1" href="#">Braddock Region Chamber of Commerce</a>
+  </div> <!--end flexbox-->
+
+  </nav> <!--end brand nav-->
+
+  <!--tab nav-->
+  <nav class="navbar sticky-top navbar-expand-sm navbar-light">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <!--needed to use flex boxes in order to maintain spacing-->
+
+    <div class="d-flex mx-auto">
+    <a class="nav-link" href="home.html">  Home  </a> 
+    </div>
+    <div class="d-flex mx-auto">
+    <a class = "nav-link active-tab" href = "#">  Find  <span class="sr-only">(current)</span></a> 
+    </div>
+    <div class="d-flex mx-auto">
+    <a class="nav-link" href="#"> Start </a> 
+    </div>
+    <div class="d-flex mx-auto">
+    <a class="nav-link" href="#">Develop</a> 
+    </div>
+    <div class="d-flex mx-auto">
+    <a class="nav-link" href="#"> About </a> 
     <!--TOP NAV-->
     <!--NOTE: contains two nav bars because of the brand section and the five tabs-->
     
@@ -69,6 +108,9 @@
           </div><!--end collapse navbar-collapse-->
       </nav> <!--end tab nav-->
 
+      </div>
+      </div>
+      </nav>
   <!--find page breadcrumb-->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -131,388 +173,291 @@
 <!--End of myCarousel-->
 
 
-<div id="content">
+<div id="content" class="container-fluid">
+  <div class="row">
   <!--Industries Side Nav-->
-  <div id="sidebar" class="Container">
+  <div id="sidebar" class="col-md-12 col-lg-3">
     <div class="row">
-      <div class="col">
         <h2 id="industries">Industries</h2>
-        <ul>
-          <li>Non-Profits</li> 
-          <li>Technology & Innovation</li> 
-          <li>Entertainment</li> 
-          <li class="active">Education</li> 
-          <li>Healthcare</li> 
-          <li>Social Justice</li>
+        <ul id="industryList">
+          <li class="industry" onclick="filterSelection('non-profits')">Non-Profits</li> 
+          <li class="industry" onclick="filterSelection('tech')">Technology & Innovation</li> 
+          <li class="industry" onclick="filterSelection('entertainment')">Entertainment</li> 
+          <li class="industry" onclick="filterSelection('education')">Education</li> 
+          <li class="industry" onclick="filterSelection('healthcare')">Healthcare</li> 
+          <li class="industry" onclick="filterSelection('social justice')">Social Justice</li>
         </ul>
-      </div><!--end col-->
     </div><!--end row-->
     <div class="row">
-      <div class="col" id="keys">
+      <div id="keys">
         <h2>Key</h2>
         <ul>
           <li><img class="keyimg" src="../images/sustainible.png">Sustainable</li>
           <li><img class="keyimg" src="../images/education.png"> Educational</li>
           <li><img class="keyimg" src="../images/certified.png"> Certified</li>
         </ul>
-      </div><!--end col keys-->
+      </div><!--end div keys-->
     </div><!--end row-->
     
   </div><!--end sidebar container-->
 
-<!--MAIN SUMMARY SECTION-->
-<div class="Container">
-  <div class="row">
-    <div class="col">
-      <h2 class="text-center industry-header">Education</h2>
+<div class="col-md-12 col-lg-9 businessBody">
+    <div class="row">
+      <div class="col text-center industry-header">
+        <h2 class="industry-header industry-info education">Education</h2>
+        <h2 class="industry-header industry-info non-profits">Non-Profits</h2>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <p class="industry-info education"><b>Braddock’s schools uplift the community. Take a look at some of the organizations below 
+              that we have partnered with that are making a major impact accross the region</b></p>
+        <p class="industry-info non-profits"><b>Braddock’s nonprofits are the backbone of the region. Take a look at some of the organizations below 
+                that we have partnered with that are making a major impact accross the region</b></p>
+      </div>
+    </div>
+  <div id="businesses" class="container-fluid">
+      <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              <div class="card education mx-auto">
+                <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+                <div class="iconHolder">
+                  <h2 class="text-left">Ambrose High</h2>
+                  <img class="icon backed" src="../images/education.png">
+                  <img class="icon backed" src="../images/certified.png">
+                  <img class="icon backed" src="../images/sustainible.png">
+                  <img class="icon star" src="../images/star.png">
+                  <p class="rating">4.5</p>
+                </div>
+              </div>
+              <div class="card non-profits">
+                <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+                <div class="iconHolder">
+                  <h2 class="text-left">Camp Lyre</h2>
+                  <img class="icon backed" src="../images/education.png">
+                  <img class="icon backed" src="../images/certified.png">
+                  <img class="icon backed" src="../images/sustainible.png">
+                  <img class="icon star" src="../images/star.png">
+                  <p class="rating">3.8</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed " src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <div class="card non-profits">
+              <img class="card-img-top" src="../images/non-profit.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Camp Lyre</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">3.8</p>
+              </div>
+            </div>
+            <div class="card education">
+              <img class="card-img-top" src="../images/Ambrose.jpg" alt="Card image cap">
+              <div class="iconHolder">
+                <h2 class="text-left">Ambrose High</h2>
+                <img class="icon backed" src="../images/education.png">
+                <img class="icon backed" src="../images/certified.png">
+                <img class="icon backed" src="../images/sustainible.png">
+                <img class="icon star" src="../images/star.png">
+                <p class="rating">4.5</p>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
-  <div class="row text-center">
-    <div class="col">
-      <p><b>Braddock’s nonprofits uplift the community. Take a look at some of the organizations below 
-      that we have partnered with that are making a major impact accross the region</b></p>
-    </div>
-  </div>
-  <br>
-<!--flex box that centers the content-->
-<div class = "d-flex justify-content-center">
-
-
-<!--BUSINESSES SECTION-->
-<div id="businesses" class="container">
-  <div class="row">
-    <div class="col">
-    <!--CARD 1-->
-    <!--Dec. 5 changes: @Lisa-->
-    <!--CHANGED CLASS: <div class="card" style="width: 18rem;"> TO <div class = "rounded-lg" style="width: 18rem;">
-    "rounded-lg" adjusts the border of the thumbnail-->
-      <div class = "rounded-lg" style="width: 18rem; ">
-      <!--CHANGED CLASS: <img class="card-img-top"... TO <img class="img-thumbnail
-      Bootstrap Shadow Utility: https://getbootstrap.com/docs/4.1/utilities/shadows/-->
-      <!--added shadow for depth-->
-      <!--border-1 changes the border width-->
-        <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-        <!-- (removed padding and margin https://getbootstrap.com/docs/4.1/utilities/spacing/)
-            and added rounded corners-->
-        <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-
-          <div class = "card-body p-2" style = "height: 6rem;">
-            <h5 class="card-title">Ambrose High</h5>
-            <!--icons from https://icons.getbootstrap.com/icons/book/-->
-            <!--ADDED: uses image thumbnail and border, p, m, mr to control the border, padding, margin and margin-right respectively with Bootstrap spacing https://getbootstrap.com/docs/4.0/utilities/spacing/-->
-            <!--NOTE: Bootstrap styles only work in HTML-->
-
-            <!--book icon; attributes from the icon page-->
-            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-            </svg>      
-            <!--check icon-->
-            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-            </svg>
-            <!--tree icon-->
-            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-            <path d="M7 13.5h2V16H7v-2.5z"/>
-            </svg>
-            <!--span used to prevent block text element; keeps it on current line-->                       
-            <span><b>4.5</b></span>
-            <!--star icon-->
-            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg>
-
-          </div> <!--end info section-->
-        </div><!--end info card-->
-
-      </div><!--end card-->
-    </div><!--end card col-->
-
-    <div class="col">
-      <!--CARD 2-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-    <div class="col">
-      <!--CARD 3-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-    
-  </div> <!--end row-->
-  <div class = "row">
-    <div class="col">
-      <!--CARD 4-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-    <div class="col">
-      <!--CARD 5-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-    <div class="col">
-      <!--CARD 6-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-
-  </div><!--end row-->
-  <div class = "row">
-    <div class="col">
-      <!--CARD 7-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-    <div class="col">
-      <!--CARD 8-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-    <div class="col">
-      <!--CARD 9-->
-        <div class = "rounded-lg" style="width: 18rem; ">
-          <img class="img-thumbnail shadow bg-white rounded border-1" src="../images/Ambrose.jpg" alt="Card image cap">
-          <div class="card p-0 m-0 business-info rounded-top rounded-left " style="width: 13rem;">
-            <div class = "card-body p-2" style = "height: 6rem;">
-              <h5 class="card-title">Ambrose High</h5>
-              <!--book icon; attributes from the icon page-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-book img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-              </svg>      
-              <!--check icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check2 img-thumbnail border-0 p-1 m-0 mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-              <!--tree icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-tree img-thumbnail border-0 p-1 m-0 mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .416.223l3 4.5A.5.5 0 0 1 11 5.5h-.098l2.022 3.235a.5.5 0 0 1-.424.765h-.191l1.638 3.276a.5.5 0 0 1-.447.724h-11a.5.5 0 0 1-.447-.724L3.69 9.5H3.5a.5.5 0 0 1-.424-.765L5.098 5.5H5a.5.5 0 0 1-.416-.777l3-4.5A.5.5 0 0 1 8 0zM5.934 4.5H6a.5.5 0 0 1 .424.765L4.402 8.5H4.5a.5.5 0 0 1 .447.724L3.31 12.5h9.382l-1.638-3.276A.5.5 0 0 1 11.5 8.5h.098L9.576 5.265A.5.5 0 0 1 10 4.5h.066L8 1.401 5.934 4.5z"/>
-              <path d="M7 13.5h2V16H7v-2.5z"/>
-              </svg>
-              <!--span used to prevent block text element; keeps it on current line-->                       
-              <span><b>4.5</b></span>
-              <!--star icon-->
-              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-              </svg>
-            </div> <!--end info section-->
-          </div><!--end info card-->
-  
-        </div><!--end card-->
-    </div><!--end card col-->
-
-  </div><!--end row-->
-  
-  
-</div><!--end business section-->
-</div> <!--end flex box-->
 </div>
-</div>
-<div class="col">
-
-</div>
-<div class="col">
-
-</div>
-</div>
-
-<div class="row">
-<div class="col">
-
-</div>
-<div class="col">
-
-</div>
-<div class="col">
-
-</div>
-</div>
-</div>
-</div>
-</div>
+</div> 
 <br><br><br><br><br><br>
+<footer>
+<a href = "mailto:cnnaeto@andrew.cmu.edu"><img class ="icon" src = "../images/gmail-32-761667.png"></a>
+<a href = "https://www.linkedin.com"><img class ="icon" src = "../images/linkedinfigma.png"></a>
+<a href = "https://www.facebook.com/"><img class="icon" src = "../images/facebook.png"></a>
+
+<!-- <p class="float-right"><a href="#">Back to top</a></p> -->
+<p class="footer float-right">&copy; 2017-2020 Braddock Region Chamber of Commerce &middot;
+200 Well ln. Braddock PA 15104 &middot;
+412-234-2565 &middot;
+</p>
+
+
+</footer>
+
+<script src="../js/scripts.js"></script>
+
 <footer class = "pb-0 mb-0">
   <!--
       CREDITS
@@ -545,5 +490,6 @@
   </div><!--end copyright-->
   
   </footer>
+  <script src="../js/scripts.js"></script>
 </body>
 </html>
